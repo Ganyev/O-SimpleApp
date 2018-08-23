@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController, UICollectionViewDataSource {
+class PhotoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
     var photosArray: [Photo] = []
@@ -16,6 +16,7 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        collectionView.delegate = self
         ServerManager.shared.getPhotos(completion: setPhoto, error: showErrorAlert)
     }
     
@@ -37,5 +38,13 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource {
         cell.setPhotoData(photoData: photosArray[indexPath.item])
         return cell
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let st = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = st.instantiateViewController(withIdentifier: "ImageViewController") as! ImageViewController
+        vc.image = self.photosArray[indexPath.item]
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
 }
