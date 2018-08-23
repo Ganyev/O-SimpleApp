@@ -54,7 +54,7 @@
         <!--Photo View Controller-->
         <scene sceneID="Ojc-0P-5YV">
             <objects>
-                <viewController storyboardIdentifier="setAlbum" id="3Ol-aF-GBA" customClass="PhotoViewController" customModule="O__Application" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="photovc" id="3Ol-aF-GBA" customClass="PhotoViewController" customModule="O__Application" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xo1-Vx-RaM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,21 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="178" height="181"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5fL-QE-Nkq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="178" height="181"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="5fL-QE-Nkq" secondAttribute="bottom" id="1FY-8a-PJH"/>
+                                            <constraint firstAttribute="trailing" secondItem="5fL-QE-Nkq" secondAttribute="trailing" id="4B8-vf-xEQ"/>
+                                            <constraint firstItem="5fL-QE-Nkq" firstAttribute="leading" secondItem="YZ9-oD-FsU" secondAttribute="leading" id="EdG-yn-vn7"/>
+                                            <constraint firstItem="5fL-QE-Nkq" firstAttribute="top" secondItem="YZ9-oD-FsU" secondAttribute="top" id="Xi4-Q3-j4S"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="5fL-QE-Nkq" id="n31-Na-sKX"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

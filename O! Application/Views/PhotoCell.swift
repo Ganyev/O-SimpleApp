@@ -7,7 +7,18 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PhotoCell: UICollectionViewCell {
+    @IBOutlet weak var imageView: UIImageView!
     
+    func setPhotoData(photoData: Photo) {
+        guard let imagePath = photoData.thumbnailUrl else {
+            return
+        }
+        guard let url = URL(string: imagePath) else {
+            return
+        }
+        imageView.kf.setImage(with: url)
+    }
 }

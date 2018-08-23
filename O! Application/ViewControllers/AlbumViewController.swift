@@ -41,6 +41,7 @@ class AlbumViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let st = UIStoryboard.init(name: "Main", bundle: nil)
         let vc = st.instantiateViewController(withIdentifier: "photovc") as! PhotoViewController
+        vc.album = albumArray[indexPath.item]
         self.show(vc, sender: self)
     }
     
