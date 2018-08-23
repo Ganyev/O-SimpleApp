@@ -24,10 +24,11 @@ class AlbumCell: UITableViewCell {
             return
         }
         // установка фото на фон
-        guard let url = URL(string: photos.first!.thumbnailUrl!) else {
+        guard let url = URL(string: photos.first!.url!) else {
             return
         }
         imgView.kf.setImage(with: url)
+        imgView.contentMode = .scaleAspectFill
     }
 
     
