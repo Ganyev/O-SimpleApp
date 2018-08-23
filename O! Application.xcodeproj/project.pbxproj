@@ -23,6 +23,7 @@
 		94FF5CF4212E987300B91808 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5CF3212E987300B91808 /* Constants.swift */; };
 		94FF5CF6212E997E00B91808 /* Albums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5CF5212E997E00B91808 /* Albums.swift */; };
 		94FF5CF8212E99AF00B91808 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5CF7212E99AF00B91808 /* Photos.swift */; };
+		94FF5CFA212E9AFD00B91808 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5CF9212E9AFD00B91808 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		94FF5CF3212E987300B91808 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		94FF5CF5212E997E00B91808 /* Albums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Albums.swift; sourceTree = "<group>"; };
 		94FF5CF7212E99AF00B91808 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		94FF5CF9212E9AFD00B91808 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C30BBA76E016F29FCF929D3A /* Pods-O! Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-O! Application.release.xcconfig"; path = "Pods/Target Support Files/Pods-O! Application/Pods-O! Application.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				94FF5CF3212E987300B91808 /* Constants.swift */,
+				94FF5CF9212E9AFD00B91808 /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				94FF5CEC212E97ED00B91808 /* PhotoCell.swift in Sources */,
 				94FF5CF6212E997E00B91808 /* Albums.swift in Sources */,
 				94FF5CF4212E987300B91808 /* Constants.swift in Sources */,
+				94FF5CFA212E9AFD00B91808 /* Extensions.swift in Sources */,
 				94FF5CEE212E97FE00B91808 /* HTTPRequestManager.swift in Sources */,
 				94FF5CF0212E982A00B91808 /* HTTPStatusCode.swift in Sources */,
 				94FF5CF2212E984800B91808 /* ServerManager.swift in Sources */,
