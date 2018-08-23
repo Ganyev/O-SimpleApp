@@ -12,6 +12,8 @@ class PostCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
+    @IBOutlet weak var postView: UIView!
+
     
     func setPostData(postData: Post) {
         titleLabel.text = postData.title
@@ -20,7 +22,8 @@ class PostCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        postView.layer.cornerRadius = 5.0
+        postView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

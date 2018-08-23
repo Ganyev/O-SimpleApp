@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+
 class AlbumCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
@@ -16,7 +17,6 @@ class AlbumCell: UITableViewCell {
     func setAlbumData(album: Album) {
        
         label.text = album.title
-        
         guard let photos = album.photos else {
             return
         }
@@ -27,6 +27,7 @@ class AlbumCell: UITableViewCell {
         guard let url = URL(string: photos.first!.url!) else {
             return
         }
+        
         imgView.kf.setImage(with: url)
         imgView.contentMode = .scaleAspectFill
     }

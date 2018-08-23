@@ -23,6 +23,13 @@ class PhotoCell: UICollectionViewCell {
         guard let url = URL(string: imagePath) else {
             return
         }
-        imageView.kf.setImage(with: url)
+        imageView.image = #imageLiteral(resourceName: "gray_placeholder")
+        imageView.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "gray_placeholder"), options: nil, progressBlock: nil) { (kfImage, nil, cache, url) in
+            UIView.transition(with: self.imageView,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.imageView.image = kfImage },
+                              completion: nil)
+        }
     }
 }

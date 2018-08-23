@@ -13,11 +13,21 @@ class CommentCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
+    @IBOutlet weak var commentView: UIView!
+    @IBOutlet weak var logoImage: UIImageView!
     
     func setCommentsData(commentData: Comment) {
         nameLabel.text = commentData.name
         emailLabel.text = commentData.email
         bodyLabel.text = commentData.body
+        commentView.layer.cornerRadius = 5.0
+        commentView.clipsToBounds = true
+        
+        logoImage.layer.borderWidth = 0.5
+        logoImage.layer.masksToBounds = false
+        logoImage.layer.borderColor = UIColor.white.cgColor
+        logoImage.layer.cornerRadius = logoImage.frame.height/2
+        logoImage.clipsToBounds = true
     }
     
     override func awakeFromNib() {
