@@ -1,0 +1,6 @@
+framework module Pods_O__Application {
+  umbrella header "Pods-O! Application-umbrella.h"
+
+  export *
+  module * { export * }
+}
