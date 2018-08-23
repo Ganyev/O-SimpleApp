@@ -25,6 +25,12 @@
 		94FF5CF8212E99AF00B91808 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5CF7212E99AF00B91808 /* Photos.swift */; };
 		94FF5CFA212E9AFD00B91808 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5CF9212E9AFD00B91808 /* Extensions.swift */; };
 		94FF5CFC212EAA4300B91808 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5CFB212EAA4300B91808 /* ImageViewController.swift */; };
+		94FF5CFE212EB31100B91808 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5CFD212EB31100B91808 /* Posts.swift */; };
+		94FF5D00212EB31F00B91808 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5CFF212EB31F00B91808 /* Comments.swift */; };
+		94FF5D02212EB41500B91808 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5D01212EB41500B91808 /* PostViewController.swift */; };
+		94FF5D04212EB43100B91808 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5D03212EB43100B91808 /* CommentViewController.swift */; };
+		94FF5D06212EB47700B91808 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5D05212EB47700B91808 /* PostCell.swift */; };
+		94FF5D08212EBF8200B91808 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5D07212EBF8200B91808 /* CommentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +55,12 @@
 		94FF5CF7212E99AF00B91808 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		94FF5CF9212E9AFD00B91808 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		94FF5CFB212EAA4300B91808 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		94FF5CFD212EB31100B91808 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		94FF5CFF212EB31F00B91808 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		94FF5D01212EB41500B91808 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		94FF5D03212EB43100B91808 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		94FF5D05212EB47700B91808 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		94FF5D07212EBF8200B91808 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		C30BBA76E016F29FCF929D3A /* Pods-O! Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-O! Application.release.xcconfig"; path = "Pods/Target Support Files/Pods-O! Application/Pods-O! Application.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +127,8 @@
 				94FF5CE5212E97BC00B91808 /* AlbumViewController.swift */,
 				94FF5CE7212E97CA00B91808 /* PhotoViewController.swift */,
 				94FF5CFB212EAA4300B91808 /* ImageViewController.swift */,
+				94FF5D01212EB41500B91808 /* PostViewController.swift */,
+				94FF5D03212EB43100B91808 /* CommentViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -134,6 +148,8 @@
 			children = (
 				94FF5CF5212E997E00B91808 /* Albums.swift */,
 				94FF5CF7212E99AF00B91808 /* Photos.swift */,
+				94FF5CFD212EB31100B91808 /* Posts.swift */,
+				94FF5CFF212EB31F00B91808 /* Comments.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,6 +159,8 @@
 			children = (
 				94FF5CE9212E97DD00B91808 /* AlbumCell.swift */,
 				94FF5CEB212E97ED00B91808 /* PhotoCell.swift */,
+				94FF5D05212EB47700B91808 /* PostCell.swift */,
+				94FF5D07212EBF8200B91808 /* CommentCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,17 +299,23 @@
 				94FF5CF8212E99AF00B91808 /* Photos.swift in Sources */,
 				94FF5CE6212E97BC00B91808 /* AlbumViewController.swift in Sources */,
 				94FF5CE8212E97CA00B91808 /* PhotoViewController.swift in Sources */,
+				94FF5D02212EB41500B91808 /* PostViewController.swift in Sources */,
 				94FF5CEA212E97DD00B91808 /* AlbumCell.swift in Sources */,
 				94FF5CCE212E96BA00B91808 /* ViewController.swift in Sources */,
 				94FF5CEC212E97ED00B91808 /* PhotoCell.swift in Sources */,
 				94FF5CF6212E997E00B91808 /* Albums.swift in Sources */,
+				94FF5D04212EB43100B91808 /* CommentViewController.swift in Sources */,
 				94FF5CF4212E987300B91808 /* Constants.swift in Sources */,
 				94FF5CFA212E9AFD00B91808 /* Extensions.swift in Sources */,
 				94FF5CEE212E97FE00B91808 /* HTTPRequestManager.swift in Sources */,
+				94FF5D06212EB47700B91808 /* PostCell.swift in Sources */,
+				94FF5CFE212EB31100B91808 /* Posts.swift in Sources */,
 				94FF5CFC212EAA4300B91808 /* ImageViewController.swift in Sources */,
+				94FF5D08212EBF8200B91808 /* CommentCell.swift in Sources */,
 				94FF5CF0212E982A00B91808 /* HTTPStatusCode.swift in Sources */,
 				94FF5CF2212E984800B91808 /* ServerManager.swift in Sources */,
 				94FF5CCC212E96BA00B91808 /* AppDelegate.swift in Sources */,
+				94FF5D00212EB31F00B91808 /* Comments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

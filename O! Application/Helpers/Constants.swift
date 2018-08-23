@@ -12,6 +12,8 @@ struct Constants {
         struct EndPoint {
             static let albums = "albums"
             static let photos = "photos"
+            static let posts = "posts"
+            static let comments = "comments"
         }
         
         struct ErrorMessage {

@@ -12,8 +12,14 @@ import Kingfisher
 class ImageViewController: UIViewController {
     
     @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var backButton: UIButton!
     var image: Photo?
     override func viewDidLoad() {
+        backButton.layer.borderWidth = 0.5
+        backButton.layer.masksToBounds = false
+        backButton.layer.borderColor = UIColor.lightGray.cgColor
+        backButton.layer.cornerRadius = backButton.frame.height/2
+        backButton.clipsToBounds = true
         super.viewDidLoad()
         guard let imagePath = image?.url else {
             return

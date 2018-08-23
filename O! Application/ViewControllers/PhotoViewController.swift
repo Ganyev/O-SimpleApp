@@ -12,7 +12,7 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
 
     @IBOutlet weak var collectionView: UICollectionView!
     var photosArray: [Photo] = []
-    var album: Album!
+    var albumId: Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -21,7 +21,11 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func setPhoto(photo: [Photo]) {
-        photosArray = photo
+        for i in photo {
+            if i.albumId == albumId {
+                photosArray.append(i)
+            }
+        }
         self.collectionView.reloadData()
     }
     
@@ -46,5 +50,12 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
         self.present(vc, animated: true, completion: nil)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.size.width
+        let inset = 15
+        let cellWidth = (width - CGFloat(3*inset))/2
+        let size = CGSize(width: cellWidth, height: cellWidth)
+        return size
+    }
     
 }
