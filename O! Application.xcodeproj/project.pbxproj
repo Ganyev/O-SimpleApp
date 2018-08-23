@@ -31,6 +31,7 @@
 		94FF5D04212EB43100B91808 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5D03212EB43100B91808 /* CommentViewController.swift */; };
 		94FF5D06212EB47700B91808 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5D05212EB47700B91808 /* PostCell.swift */; };
 		94FF5D08212EBF8200B91808 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5D07212EBF8200B91808 /* CommentCell.swift */; };
+		94FF5D0A212F450300B91808 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FF5D09212F450300B91808 /* DataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		94FF5D03212EB43100B91808 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		94FF5D05212EB47700B91808 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		94FF5D07212EBF8200B91808 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		94FF5D09212F450300B91808 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		C30BBA76E016F29FCF929D3A /* Pods-O! Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-O! Application.release.xcconfig"; path = "Pods/Target Support Files/Pods-O! Application/Pods-O! Application.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 			children = (
 				94FF5CF3212E987300B91808 /* Constants.swift */,
 				94FF5CF9212E9AFD00B91808 /* Extensions.swift */,
+				94FF5D09212F450300B91808 /* DataHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				94FF5D04212EB43100B91808 /* CommentViewController.swift in Sources */,
 				94FF5CF4212E987300B91808 /* Constants.swift in Sources */,
 				94FF5CFA212E9AFD00B91808 /* Extensions.swift in Sources */,
+				94FF5D0A212F450300B91808 /* DataHelper.swift in Sources */,
 				94FF5CEE212E97FE00B91808 /* HTTPRequestManager.swift in Sources */,
 				94FF5D06212EB47700B91808 /* PostCell.swift in Sources */,
 				94FF5CFE212EB31100B91808 /* Posts.swift in Sources */,

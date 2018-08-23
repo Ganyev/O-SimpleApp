@@ -12,22 +12,20 @@ class CommentViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var commentsArray: [Comment] = []
-    var post: Post!
+    var postid: Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         ServerManager.shared.getComments(completion: setComments, error: showErrorAlert)
     }
-    
-//        func printPosts(post: [Comment]) {
-//            for i in post {
-//                print(i.name)
-//            }
-//        }
 
     func setComments(comment: [Comment]) {
-        commentsArray = comment
+        for i in comment {
+            if i.postId == postid {
+                commentsArray.append(i)
+            }
+        }
         self.tableView.reloadData()
     }
     

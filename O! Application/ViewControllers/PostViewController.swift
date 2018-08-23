@@ -20,23 +20,11 @@ class PostViewController: UIViewController, UITableViewDataSource, UITableViewDe
         ServerManager.shared.getPosts(completion: setPosts, error: showErrorAlert)
     }
     
-    func setPosts(post: [Post]) {
-        postArray = post
+    func setPosts(posts: [Post]) {
+        postArray = DataHelper.shared.shufflePostsArray(post: posts)
         self.tableView.reloadData()
     }
     
-    func shufflePostsArray(post: [Post]) -> [Post]  {
-        var tempArray = post
-        var shuffledPost = [Post]();
-        for _ in 0..<10
-        {
-            let rand = Int(arc4random_uniform(UInt32(tempArray.count)))
-            
-            shuffledPost.append(tempArray[rand])
-            tempArray.remove(at: rand)
-        }
-        return shuffledPost
-    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -55,7 +43,7 @@ class PostViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let st = UIStoryboard.init(name: "Main", bundle: nil)
         let vc = st.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
-        vc.post = postArray[indexPath.row]
+        vc.postid = postArray[indexPath.row].id
         self.show(vc, sender: self)
     }
 }

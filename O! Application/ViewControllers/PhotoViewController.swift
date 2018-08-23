@@ -13,6 +13,8 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet weak var collectionView: UICollectionView!
     var photosArray: [Photo] = []
     var albumId: Int!
+    var image: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -28,6 +30,7 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
         self.collectionView.reloadData()
     }
+
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

@@ -11,8 +11,12 @@ import Kingfisher
 
 class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
+
     
     func setPhotoData(photoData: Photo) {
+        imageView.layer.cornerRadius = 10.0
+        imageView.clipsToBounds = true
+        
         guard let imagePath = photoData.thumbnailUrl else {
             return
         }

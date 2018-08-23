@@ -7,37 +7,46 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AlbumViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var albumArray: [Album] = []
     var fullAlbomArray: [Album] = []
+    var photoArray: [Photo] = []
+    var shufflePhoto: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         ServerManager.shared.getAlbums(completion: setAlbum, error: showErrorAlert)
+        ServerManager.shared.getPhotos(completion: setPhoto, error: showErrorAlert)
         tableView.dataSource = self
         tableView.delegate = self
         
     }
     
     func setAlbum(album: [Album]) {
-        albumArray = shuffleAlbumArray(album: album)
-        self.tableView.reloadData()
+        
+        DataHelper.shared.addAlbums(albums: album)
+        albumArray = DataHelper.shared.albums
+        if !photoArray.isEmpty {
+            self.tableView.reloadData()
+        }
     }
     
-    func shuffleAlbumArray(album: [Album]) -> [Album]  {
-        var tempArray = album
-        var shuffledAlbum = [Album]();
-        for _ in 0..<10
-        {
-            let rand = Int(arc4random_uniform(UInt32(tempArray.count)))
-
-            shuffledAlbum.append(tempArray[rand])
-            tempArray.remove(at: rand)
+    func setPhoto(photo: [Photo]) {
+        photoArray = photo
+        DataHelper.shared.assignPhotosToAlbum(photos: photo)
+        if !albumArray.isEmpty {
+            self.tableView.reloadData()
         }
-        return shuffledAlbum
     }
+    
+    
+    
+    
+    
+
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -49,7 +58,8 @@ class AlbumViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "albumcell") as! AlbumCell
-        cell.textLabel?.text = albumArray[indexPath.row].title
+        cell.setAlbumData(album: albumArray[indexPath.row])
+        
         return cell
     }
     
